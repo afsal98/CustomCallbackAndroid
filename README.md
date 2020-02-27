@@ -11,45 +11,45 @@ Step 4: Define the callback method description in your 'ToClass'.
 
 --------------------------------------------------------------------------------------------------------------------------------
 
-class FromOfCallback {
+    class FromOfCallback {
 
     // Create an object for interface
-   DemoCallbackInterface objDemoCallbackInterface;
+    DemoCallbackInterface objDemoCallbackInterface;
       //....
       //.....
       //....
       //....
-  void onEvent() {
+    void onEvent() {
   
           //call the callback method in any events or whenever you want
           
-  callback.callbackCall();
+    callback.callbackCall();
   
-  }
+    }
 
     // Create The callback interface in your From class
-  interface DemoCallbackInterface {
+    interface DemoCallbackInterface {
   
-   void demoMethodCallback();
-  }
-}
+    void demoMethodCallback();
+    }
+    }
 
-//Perform the Callback in your 'ToClass'
-// Option 1:
+    //Perform the Callback in your 'ToClass'
+    // Option 1:
 
-class ToClass implements DemoCallbackInterface {
-   void demoMethodCallback() {
+    class ToClass implements DemoCallbackInterface {
+    void demoMethodCallback() {
       // callback code goes here
-   }
-}
+     }
+    }
 
-FromClass.objDemoCallbackInterface = new DemoCallbackInterface();
+    FromClass.objDemoCallbackInterface = new DemoCallbackInterface();
 
-// Option 2:
+    // Option 2:
 
-FromClass.objDemoCallbackInterface = new DemoCallbackInterface() {
+    FromClass.objDemoCallbackInterface = new DemoCallbackInterface() {
 
-   void demoMethodCallback() {
+    void demoMethodCallback() {
       // callback code goes here
-   }
-};
+     }
+    };
